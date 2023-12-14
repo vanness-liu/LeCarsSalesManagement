@@ -1,3 +1,6 @@
 # LeCarsSalesManagement
 WIX1002 Fundamentals of Programming Assignment <br>
-Hello~ This is a group-effort assignment project of a car sales management system. :)
+Hello ~ 
+For image icons, I have trouble putting in an image as an icon of a button and able to let other ppl who download the code to run on their machines...
+So later on, we'll only add images
+
