@@ -8,12 +8,12 @@ package swing;
  *
  * @author Vanness
  */
-public class MHomePage1 extends javax.swing.JFrame {
+public class SHomePage1 extends javax.swing.JFrame {
 
     /**
      * Creates new form MHomePage
      */
-    public MHomePage1() {
+    public SHomePage1() {
         initComponents();
     }
 
@@ -30,13 +30,6 @@ public class MHomePage1 extends javax.swing.JFrame {
         tabPane = new javax.swing.JTabbedPane();
         homeTab = new javax.swing.JPanel();
         hello = new javax.swing.JLabel();
-        importTab = new javax.swing.JPanel();
-        importDataLabel = new javax.swing.JLabel();
-        importVehicleButton = new javax.swing.JButton();
-        importSalesButton = new javax.swing.JButton();
-        importCustButton = new javax.swing.JButton();
-        importEmployeeButton = new javax.swing.JButton();
-        importMessageLabel = new javax.swing.JLabel();
         insertTab = new javax.swing.JPanel();
         insertTabPane = new javax.swing.JTabbedPane();
         insertCustomerPane = new javax.swing.JPanel();
@@ -71,15 +64,6 @@ public class MHomePage1 extends javax.swing.JFrame {
         soldPricePromptField = new javax.swing.JTextField();
         insertVehSuccessLabel = new javax.swing.JLabel();
         addVehButton = new javax.swing.JButton();
-        insertEmployeePane = new javax.swing.JPanel();
-        eIDPromptLabel = new javax.swing.JLabel();
-        eIDPromptOption = new javax.swing.JComboBox<>();
-        insertESuccessLabel = new javax.swing.JLabel();
-        addEButton = new javax.swing.JButton();
-        eNamePromptLabel = new javax.swing.JLabel();
-        ePasswordPromptLabel = new javax.swing.JLabel();
-        eNamePromptField = new javax.swing.JTextField();
-        ePasswordPromptField = new javax.swing.JTextField();
         insertDataPromptLabel = new javax.swing.JLabel();
         viewTab = new javax.swing.JPanel();
         tableOptionsPromptLabel = new javax.swing.JLabel();
@@ -99,14 +83,11 @@ public class MHomePage1 extends javax.swing.JFrame {
         jScrollPane6 = new javax.swing.JScrollPane();
         employeeTable = new javax.swing.JTable();
         filterButton = new javax.swing.JButton();
-        calculatePanel = new javax.swing.JPanel();
         topPanel = new javax.swing.JPanel();
         logoutButton = new javax.swing.JButton();
-        importButton = new javax.swing.JLabel();
         homeButton = new javax.swing.JLabel();
         insertButton = new javax.swing.JLabel();
         viewButton = new javax.swing.JLabel();
-        calculateButton = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -146,7 +127,7 @@ public class MHomePage1 extends javax.swing.JFrame {
             .addGroup(homeTabLayout.createSequentialGroup()
                 .addGap(260, 260, 260)
                 .addComponent(hello, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(358, Short.MAX_VALUE))
+                .addContainerGap(372, Short.MAX_VALUE))
         );
         homeTabLayout.setVerticalGroup(
             homeTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,84 +138,6 @@ public class MHomePage1 extends javax.swing.JFrame {
         );
 
         tabPane.addTab("homeTab", homeTab);
-
-        importTab.setBackground(new java.awt.Color(204, 255, 204));
-        importTab.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        importDataLabel.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        importDataLabel.setForeground(new java.awt.Color(0, 0, 0));
-        importDataLabel.setText("Import Data Options");
-
-        importVehicleButton.setBackground(new java.awt.Color(153, 255, 153));
-        importVehicleButton.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        importVehicleButton.setForeground(new java.awt.Color(0, 0, 0));
-        importVehicleButton.setText("Vehicle");
-        importVehicleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        importSalesButton.setBackground(new java.awt.Color(255, 153, 255));
-        importSalesButton.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        importSalesButton.setForeground(new java.awt.Color(0, 0, 0));
-        importSalesButton.setText("Sales");
-        importSalesButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        importCustButton.setBackground(new java.awt.Color(153, 153, 255));
-        importCustButton.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        importCustButton.setForeground(new java.awt.Color(0, 0, 0));
-        importCustButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        importCustButton.setLabel("Customer");
-
-        importEmployeeButton.setBackground(new java.awt.Color(102, 204, 255));
-        importEmployeeButton.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        importEmployeeButton.setForeground(new java.awt.Color(0, 0, 0));
-        importEmployeeButton.setText("Employee");
-        importEmployeeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        importMessageLabel.setForeground(new java.awt.Color(255, 0, 0));
-        importMessageLabel.setText("Display something if import is successful or fail");
-
-        javax.swing.GroupLayout importTabLayout = new javax.swing.GroupLayout(importTab);
-        importTab.setLayout(importTabLayout);
-        importTabLayout.setHorizontalGroup(
-            importTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(importTabLayout.createSequentialGroup()
-                .addGap(248, 248, 248)
-                .addGroup(importTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(importCustButton, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
-                    .addComponent(importVehicleButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(98, 98, 98)
-                .addGroup(importTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(importEmployeeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(importSalesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(205, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, importTabLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(importTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, importTabLayout.createSequentialGroup()
-                        .addComponent(importDataLabel)
-                        .addGap(272, 272, 272))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, importTabLayout.createSequentialGroup()
-                        .addComponent(importMessageLabel)
-                        .addGap(325, 325, 325))))
-        );
-        importTabLayout.setVerticalGroup(
-            importTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(importTabLayout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addComponent(importDataLabel)
-                .addGap(45, 45, 45)
-                .addGroup(importTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(importSalesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(importCustButton, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(importMessageLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                .addGroup(importTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(importEmployeeButton, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                    .addComponent(importVehicleButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(56, 56, 56))
-        );
-
-        tabPane.addTab("importTab", importTab);
 
         insertTab.setBackground(new java.awt.Color(204, 255, 204));
         insertTab.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -526,96 +429,13 @@ public class MHomePage1 extends javax.swing.JFrame {
 
         insertTabPane.addTab("vehicle", insertVehiclePane);
 
-        insertEmployeePane.setBackground(new java.awt.Color(204, 255, 204));
-
-        eIDPromptLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        eIDPromptLabel.setForeground(new java.awt.Color(0, 0, 0));
-        eIDPromptLabel.setText("Employee Status :");
-
-        eIDPromptOption.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        insertESuccessLabel.setForeground(new java.awt.Color(255, 0, 0));
-        insertESuccessLabel.setText("Display something if successfully added");
-
-        addEButton.setBackground(new java.awt.Color(255, 51, 51));
-        addEButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        addEButton.setText("Add");
-
-        eNamePromptLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        eNamePromptLabel.setForeground(new java.awt.Color(0, 0, 0));
-        eNamePromptLabel.setText("Employee Name :");
-
-        ePasswordPromptLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        ePasswordPromptLabel.setForeground(new java.awt.Color(0, 0, 0));
-        ePasswordPromptLabel.setText("Password :");
-
-        eNamePromptField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eNamePromptFieldActionPerformed(evt);
-            }
-        });
-
-        ePasswordPromptField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ePasswordPromptFieldActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout insertEmployeePaneLayout = new javax.swing.GroupLayout(insertEmployeePane);
-        insertEmployeePane.setLayout(insertEmployeePaneLayout);
-        insertEmployeePaneLayout.setHorizontalGroup(
-            insertEmployeePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(insertEmployeePaneLayout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addGroup(insertEmployeePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ePasswordPromptLabel)
-                    .addComponent(eIDPromptLabel)
-                    .addComponent(eNamePromptLabel))
-                .addGap(18, 18, 18)
-                .addGroup(insertEmployeePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(insertEmployeePaneLayout.createSequentialGroup()
-                        .addComponent(addEButton, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(41, 41, 41)
-                        .addComponent(insertESuccessLabel)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(insertEmployeePaneLayout.createSequentialGroup()
-                        .addGroup(insertEmployeePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(eNamePromptField, javax.swing.GroupLayout.DEFAULT_SIZE, 522, Short.MAX_VALUE)
-                            .addComponent(eIDPromptOption, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ePasswordPromptField))
-                        .addGap(174, 174, 174))))
-        );
-        insertEmployeePaneLayout.setVerticalGroup(
-            insertEmployeePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(insertEmployeePaneLayout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addGroup(insertEmployeePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(eNamePromptLabel)
-                    .addComponent(eNamePromptField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
-                .addGroup(insertEmployeePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(eIDPromptLabel)
-                    .addComponent(eIDPromptOption))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                .addGroup(insertEmployeePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ePasswordPromptLabel)
-                    .addComponent(ePasswordPromptField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
-                .addGroup(insertEmployeePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addEButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(insertESuccessLabel))
-                .addGap(71, 71, 71))
-        );
-
-        insertTabPane.addTab("employee", insertEmployeePane);
-
         insertDataPromptLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         insertDataPromptLabel.setForeground(new java.awt.Color(0, 0, 0));
         insertDataPromptLabel.setText("Insert Data Options :");
 
         insertDataOptions.setBackground(new java.awt.Color(255, 51, 51));
         insertDataOptions.setForeground(new java.awt.Color(255, 255, 255));
-        insertDataOptions.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Customer", "Sales", "Vehicle", "Employee" }));
+        insertDataOptions.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Customer", "Sales", "Vehicle" }));
         insertDataOptions.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         insertDataOptions.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -660,7 +480,7 @@ public class MHomePage1 extends javax.swing.JFrame {
 
         tableOptionsPrompt.setBackground(new java.awt.Color(255, 51, 51));
         tableOptionsPrompt.setForeground(new java.awt.Color(255, 255, 255));
-        tableOptionsPrompt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Customer", "Sales", "Vehicle", "Employee" }));
+        tableOptionsPrompt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Customer", "Sales", "Vehicle" }));
         tableOptionsPrompt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tableOptionsPrompt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -859,21 +679,6 @@ public class MHomePage1 extends javax.swing.JFrame {
 
         tabPane.addTab("viewTab", viewTab);
 
-        calculatePanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        javax.swing.GroupLayout calculatePanelLayout = new javax.swing.GroupLayout(calculatePanel);
-        calculatePanel.setLayout(calculatePanelLayout);
-        calculatePanelLayout.setHorizontalGroup(
-            calculatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 937, Short.MAX_VALUE)
-        );
-        calculatePanelLayout.setVerticalGroup(
-            calculatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 540, Short.MAX_VALUE)
-        );
-
-        tabPane.addTab("calculateTab", calculatePanel);
-
         getContentPane().add(tabPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1030, 540));
 
         topPanel.setBackground(new java.awt.Color(102, 255, 204));
@@ -884,17 +689,6 @@ public class MHomePage1 extends javax.swing.JFrame {
         logoutButton.setForeground(new java.awt.Color(255, 255, 255));
         logoutButton.setText("Logout");
         logoutButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        importButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        importButton.setForeground(new java.awt.Color(0, 0, 0));
-        importButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        importButton.setText("Import");
-        importButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        importButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                importButtonMouseClicked(evt);
-            }
-        });
 
         homeButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         homeButton.setForeground(new java.awt.Color(0, 0, 0));
@@ -929,17 +723,6 @@ public class MHomePage1 extends javax.swing.JFrame {
             }
         });
 
-        calculateButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        calculateButton.setForeground(new java.awt.Color(0, 0, 0));
-        calculateButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        calculateButton.setText("Calculate");
-        calculateButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        calculateButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                calculateButtonMouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout topPanelLayout = new javax.swing.GroupLayout(topPanel);
         topPanel.setLayout(topPanelLayout);
         topPanelLayout.setHorizontalGroup(
@@ -948,14 +731,10 @@ public class MHomePage1 extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(importButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addComponent(insertButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(viewButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(calculateButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 405, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 600, Short.MAX_VALUE)
                 .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
         );
@@ -966,11 +745,9 @@ public class MHomePage1 extends javax.swing.JFrame {
                     .addGroup(topPanelLayout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addGroup(topPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(importButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(insertButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(viewButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(calculateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(viewButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(topPanelLayout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(logoutButton)))
@@ -981,11 +758,6 @@ public class MHomePage1 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void importButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_importButtonMouseClicked
-        // TODO add your handling code here:
-        tabPane.setSelectedIndex(1);
-    }//GEN-LAST:event_importButtonMouseClicked
 
     private void homeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseClicked
         // TODO add your handling code here:
@@ -998,46 +770,13 @@ public class MHomePage1 extends javax.swing.JFrame {
 
     private void insertButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_insertButtonMouseClicked
         // TODO add your handling code here:
-        tabPane.setSelectedIndex(2);
+        tabPane.setSelectedIndex(1);
     }//GEN-LAST:event_insertButtonMouseClicked
 
     private void viewButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewButtonMouseClicked
         // TODO add your handling code here:
-        tabPane.setSelectedIndex(3);
+        tabPane.setSelectedIndex(2);
     }//GEN-LAST:event_viewButtonMouseClicked
-
-    private void calculateButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_calculateButtonMouseClicked
-        // TODO add your handling code here:
-        tabPane.setSelectedIndex(4);
-    }//GEN-LAST:event_calculateButtonMouseClicked
-
-    private void phoneNoPromptFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phoneNoPromptFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_phoneNoPromptFieldActionPerformed
-
-    private void postcodePromptFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_postcodePromptFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_postcodePromptFieldActionPerformed
-
-    private void acPricePromptFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acPricePromptFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_acPricePromptFieldActionPerformed
-
-    private void soldPricePromptFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_soldPricePromptFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_soldPricePromptFieldActionPerformed
-
-    private void carPlatePromptFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carPlatePromptFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_carPlatePromptFieldActionPerformed
-
-    private void eNamePromptFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eNamePromptFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_eNamePromptFieldActionPerformed
-
-    private void ePasswordPromptFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ePasswordPromptFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ePasswordPromptFieldActionPerformed
 
     private void insertDataOptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertDataOptionsActionPerformed
         // TODO add your handling code here:
@@ -1048,8 +787,6 @@ public class MHomePage1 extends javax.swing.JFrame {
         insertTabPane.setSelectedIndex(1);
         else if(indexInsert==2)
         insertTabPane.setSelectedIndex(2);
-        else
-        insertTabPane.setSelectedIndex(3);
     }//GEN-LAST:event_insertDataOptionsActionPerformed
 
     private void tableOptionsPromptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tableOptionsPromptActionPerformed
@@ -1061,9 +798,27 @@ public class MHomePage1 extends javax.swing.JFrame {
         TableTabPane.setSelectedIndex(1);
         else if(indexView==2)
         TableTabPane.setSelectedIndex(2);
-        else
-        TableTabPane.setSelectedIndex(3);
     }//GEN-LAST:event_tableOptionsPromptActionPerformed
+
+    private void soldPricePromptFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_soldPricePromptFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_soldPricePromptFieldActionPerformed
+
+    private void acPricePromptFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acPricePromptFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_acPricePromptFieldActionPerformed
+
+    private void carPlatePromptFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carPlatePromptFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_carPlatePromptFieldActionPerformed
+
+    private void postcodePromptFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_postcodePromptFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_postcodePromptFieldActionPerformed
+
+    private void phoneNoPromptFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phoneNoPromptFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_phoneNoPromptFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1082,18 +837,14 @@ public class MHomePage1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MHomePage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SHomePage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MHomePage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SHomePage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MHomePage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SHomePage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MHomePage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SHomePage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -1102,7 +853,7 @@ public class MHomePage1 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MHomePage1().setVisible(true);
+                new SHomePage1().setVisible(true);
 
             }
         });
@@ -1113,11 +864,8 @@ public class MHomePage1 extends javax.swing.JFrame {
     private javax.swing.JTextField acPricePromptField;
     private javax.swing.JLabel acPricePromptLabel;
     private javax.swing.JButton addCustButton;
-    private javax.swing.JButton addEButton;
     private javax.swing.JButton addSalesButton;
     private javax.swing.JButton addVehButton;
-    private javax.swing.JLabel calculateButton;
-    private javax.swing.JPanel calculatePanel;
     private javax.swing.JTextField carModelPromptField;
     private javax.swing.JLabel carModelPromptLabel;
     private javax.swing.JTextField carPlatePromptField;
@@ -1132,33 +880,17 @@ public class MHomePage1 extends javax.swing.JFrame {
     private javax.swing.JLabel customerNamePromptLabel;
     private javax.swing.JTable customerTable;
     private javax.swing.JPanel customerTablePane;
-    private javax.swing.JLabel eIDPromptLabel;
-    private javax.swing.JComboBox<String> eIDPromptOption;
-    private javax.swing.JTextField eNamePromptField;
-    private javax.swing.JLabel eNamePromptLabel;
-    private javax.swing.JTextField ePasswordPromptField;
-    private javax.swing.JLabel ePasswordPromptLabel;
     private javax.swing.JTable employeeTable;
     private javax.swing.JPanel employeeTablePane;
     private javax.swing.JButton filterButton;
     private javax.swing.JLabel hello;
     private javax.swing.JLabel homeButton;
     private javax.swing.JPanel homeTab;
-    private javax.swing.JLabel importButton;
-    private javax.swing.JButton importCustButton;
-    private javax.swing.JLabel importDataLabel;
-    private javax.swing.JButton importEmployeeButton;
-    private javax.swing.JLabel importMessageLabel;
-    private javax.swing.JButton importSalesButton;
-    private javax.swing.JPanel importTab;
-    private javax.swing.JButton importVehicleButton;
     private javax.swing.JLabel insertButton;
     private javax.swing.JLabel insertCustSuccessLabel;
     private javax.swing.JPanel insertCustomerPane;
     private final javax.swing.JComboBox<String> insertDataOptions = new javax.swing.JComboBox<>();
     private javax.swing.JLabel insertDataPromptLabel;
-    private javax.swing.JLabel insertESuccessLabel;
-    private javax.swing.JPanel insertEmployeePane;
     private javax.swing.JPanel insertSalesPane;
     private javax.swing.JLabel insertSalesSuccessLabel;
     private javax.swing.JPanel insertTab;
