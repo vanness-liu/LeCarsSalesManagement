@@ -4,16 +4,41 @@
  */
 package swing;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Vanness
  */
-public class MHomePage1 extends javax.swing.JFrame {
-
+public class MHomePage extends javax.swing.JFrame {
+    // Initial import customer data
+    final String CUSTPATH = "C:\\Users\\Vanness\\Downloads\\assignmentFiles\\cust.csv";
+    ArrayList<ArrayList<String>> customer = ImportExport.importCSV(CUSTPATH);
+    
+    // Initial import sales data
+    final String SALESPATH = "C:\\Users\\Vanness\\Downloads\\assignmentFiles\\sales.csv";
+    ArrayList<ArrayList<String>> sales = ImportExport.importCSV(SALESPATH);
+    
+    // Initial import vehicle data
+    final String VEHICLEPATH = "C:\\Users\\Vanness\\Downloads\\assignmentFiles\\vehicle.csv";
+    ArrayList<ArrayList<String>> vehicle = ImportExport.importCSV(VEHICLEPATH);
+    
+    // Initial import employee data
+    final String EMPLOYEEPATH = "C:\\Users\\Vanness\\Downloads\\assignmentFiles\\employee.csv";
+    ArrayList<ArrayList<String>> employee = ImportExport.importCSV(EMPLOYEEPATH);
+    
     /**
      * Creates new form MHomePage
      */
-    public MHomePage1() {
+    public MHomePage() {
         initComponents();
     }
 
@@ -36,7 +61,6 @@ public class MHomePage1 extends javax.swing.JFrame {
         importSalesButton = new javax.swing.JButton();
         importCustButton = new javax.swing.JButton();
         importEmployeeButton = new javax.swing.JButton();
-        importMessageLabel = new javax.swing.JLabel();
         insertTab = new javax.swing.JPanel();
         insertTabPane = new javax.swing.JTabbedPane();
         insertCustomerPane = new javax.swing.JPanel();
@@ -170,27 +194,44 @@ public class MHomePage1 extends javax.swing.JFrame {
         importVehicleButton.setForeground(new java.awt.Color(0, 0, 0));
         importVehicleButton.setText("Vehicle");
         importVehicleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        importVehicleButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                importVehicleButtonMouseClicked(evt);
+            }
+        });
 
         importSalesButton.setBackground(new java.awt.Color(255, 153, 255));
         importSalesButton.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         importSalesButton.setForeground(new java.awt.Color(0, 0, 0));
         importSalesButton.setText("Sales");
         importSalesButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        importSalesButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                importSalesButtonMouseClicked(evt);
+            }
+        });
 
         importCustButton.setBackground(new java.awt.Color(153, 153, 255));
         importCustButton.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         importCustButton.setForeground(new java.awt.Color(0, 0, 0));
         importCustButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         importCustButton.setLabel("Customer");
+        importCustButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                importCustButtonMouseClicked(evt);
+            }
+        });
 
         importEmployeeButton.setBackground(new java.awt.Color(102, 204, 255));
         importEmployeeButton.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         importEmployeeButton.setForeground(new java.awt.Color(0, 0, 0));
         importEmployeeButton.setText("Employee");
         importEmployeeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        importMessageLabel.setForeground(new java.awt.Color(255, 0, 0));
-        importMessageLabel.setText("Display something if import is successful or fail");
+        importEmployeeButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                importEmployeeButtonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout importTabLayout = new javax.swing.GroupLayout(importTab);
         importTab.setLayout(importTabLayout);
@@ -208,13 +249,8 @@ public class MHomePage1 extends javax.swing.JFrame {
                 .addContainerGap(205, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, importTabLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(importTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, importTabLayout.createSequentialGroup()
-                        .addComponent(importDataLabel)
-                        .addGap(272, 272, 272))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, importTabLayout.createSequentialGroup()
-                        .addComponent(importMessageLabel)
-                        .addGap(325, 325, 325))))
+                .addComponent(importDataLabel)
+                .addGap(272, 272, 272))
         );
         importTabLayout.setVerticalGroup(
             importTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -225,9 +261,7 @@ public class MHomePage1 extends javax.swing.JFrame {
                 .addGroup(importTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(importSalesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(importCustButton, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(importMessageLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addGroup(importTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(importEmployeeButton, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
                     .addComponent(importVehicleButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -676,17 +710,9 @@ public class MHomePage1 extends javax.swing.JFrame {
 
         customerTablePane.setBackground(new java.awt.Color(102, 255, 204));
 
-        customerTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
+        customerTable.setModel(new DefaultTableModel(returnContents(customer),returnHeader(customer))
+        );
+        customerTable.setEnabled(false);
         jScrollPane3.setViewportView(customerTable);
 
         javax.swing.GroupLayout customerTablePaneLayout = new javax.swing.GroupLayout(customerTablePane);
@@ -708,17 +734,8 @@ public class MHomePage1 extends javax.swing.JFrame {
         salesTablePane.setBackground(new java.awt.Color(102, 255, 204));
         salesTablePane.setForeground(new java.awt.Color(0, 0, 0));
 
-        salesTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
+        salesTable.setModel(new DefaultTableModel(returnContents(sales),returnHeader(sales)));
+        salesTable.setEnabled(false);
         jScrollPane4.setViewportView(salesTable);
 
         javax.swing.GroupLayout salesTablePaneLayout = new javax.swing.GroupLayout(salesTablePane);
@@ -739,17 +756,8 @@ public class MHomePage1 extends javax.swing.JFrame {
 
         vehicleTablePane.setBackground(new java.awt.Color(102, 255, 204));
 
-        vehicleTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
+        vehicleTable.setModel(new DefaultTableModel(returnContents(vehicle),returnHeader(vehicle)));
+        vehicleTable.setEnabled(false);
         jScrollPane5.setViewportView(vehicleTable);
 
         javax.swing.GroupLayout vehicleTablePaneLayout = new javax.swing.GroupLayout(vehicleTablePane);
@@ -772,17 +780,8 @@ public class MHomePage1 extends javax.swing.JFrame {
 
         jScrollPane6.setBackground(new java.awt.Color(102, 255, 204));
 
-        employeeTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
+        employeeTable.setModel(new DefaultTableModel(returnContents(employee),returnHeader(employee)));
+        employeeTable.setEnabled(false);
         jScrollPane6.setViewportView(employeeTable);
 
         javax.swing.GroupLayout employeeTablePaneLayout = new javax.swing.GroupLayout(employeeTablePane);
@@ -884,6 +883,11 @@ public class MHomePage1 extends javax.swing.JFrame {
         logoutButton.setForeground(new java.awt.Color(255, 255, 255));
         logoutButton.setText("Logout");
         logoutButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        logoutButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logoutButtonMouseClicked(evt);
+            }
+        });
 
         importButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         importButton.setForeground(new java.awt.Color(0, 0, 0));
@@ -1056,15 +1060,200 @@ public class MHomePage1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         int indexView = tableOptionsPrompt.getSelectedIndex();
         if(indexView==0)
-        TableTabPane.setSelectedIndex(0);
+            TableTabPane.setSelectedIndex(0);
         else if(indexView==1)
-        TableTabPane.setSelectedIndex(1);
+            TableTabPane.setSelectedIndex(1);
         else if(indexView==2)
-        TableTabPane.setSelectedIndex(2);
+            TableTabPane.setSelectedIndex(2);
         else
-        TableTabPane.setSelectedIndex(3);
+            TableTabPane.setSelectedIndex(3);
     }//GEN-LAST:event_tableOptionsPromptActionPerformed
 
+    private void logoutButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutButtonMouseClicked
+        // TODO add your handling code here:
+        int logout = JOptionPane.showConfirmDialog(null,"Logging out?", "Warning",JOptionPane.YES_NO_OPTION);
+        if(logout==JOptionPane.YES_OPTION){
+            ImportExport.ExportCSV(customer,"C:\\Users\\Vanness\\Downloads\\assignmentFiles\\cust3.csv");
+            dispose();
+        }
+    }//GEN-LAST:event_logoutButtonMouseClicked
+
+    private void importCustButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_importCustButtonMouseClicked
+        // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setCurrentDirectory(new File("C:\\Users\\Vanness\\Downloads\\assignmentFiles"));// set the directory
+        FileNameExtensionFilter filter = new FileNameExtensionFilter(".csv","csv");
+        fileChooser.setFileFilter(filter);
+        int response = fileChooser.showOpenDialog(null);
+        if(response==fileChooser.APPROVE_OPTION){
+            ArrayList<ArrayList<String>> temp = ImportExport.importCSV(fileChooser.getSelectedFile().getAbsolutePath());
+            String [] tempHeader = returnHeader(temp);
+            String [] prevCustHeader = returnHeader(customer);
+            boolean compatibility=true;
+            // determine if the inserted file has the same column values
+            for(int i=0;i<prevCustHeader.length;i++)
+                if(!prevCustHeader[i].equalsIgnoreCase(tempHeader[i])){
+                    JOptionPane.showMessageDialog(null, "The selected file is not compatible","Warning",JOptionPane.WARNING_MESSAGE);
+                    compatibility=false;
+                    break;
+                }
+            // check if the inserted file contains repeated entries
+            ArrayList <Integer> avoidAdd = new ArrayList <Integer>();
+            for(int i=1;i<temp.size();i++)
+                for(int j=0;j<temp.get(i).size();j++){
+                    String key = temp.get(i).get(j);
+                    for(int m=1;m<customer.size();m++)
+                        for(int n=0;n<customer.get(i).size();n++)
+                            if(customer.get(m).get(n).equalsIgnoreCase(key))
+                                avoidAdd.add(i); 
+                }
+            if(compatibility){
+                customer.addAll(returnContents(temp,avoidAdd));
+                JOptionPane.showMessageDialog(null, "File added successfully!","Success",JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_importCustButtonMouseClicked
+
+    private void importSalesButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_importSalesButtonMouseClicked
+        // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setCurrentDirectory(new File("C:\\Users\\Vanness\\Downloads\\assignmentFiles"));// set the directory
+        FileNameExtensionFilter filter = new FileNameExtensionFilter(".csv","csv");
+        fileChooser.setFileFilter(filter);
+        int response = fileChooser.showOpenDialog(null);
+        if(response==fileChooser.APPROVE_OPTION){
+            ArrayList<ArrayList<String>> temp = ImportExport.importCSV(fileChooser.getSelectedFile().getAbsolutePath());
+            String [] tempHeader = returnHeader(temp);
+            String [] prevSalesHeader = returnHeader(sales);
+            boolean compatibility=true;
+            // determine if the inserted file has the same column values
+            for(int i=0;i<prevSalesHeader.length;i++)
+                if(!prevSalesHeader[i].equalsIgnoreCase(tempHeader[i])){
+                    JOptionPane.showMessageDialog(null, "The selected file is not compatible","Warning",JOptionPane.WARNING_MESSAGE);
+                    compatibility=false;
+                    break;
+                }
+            // check if the inserted file contains repeated entries
+            ArrayList <Integer> avoidAdd = new ArrayList <Integer>();
+            for(int i=1;i<temp.size();i++)
+                for(int j=0;j<temp.get(i).size();j++){
+                    String key = temp.get(i).get(j);
+                    for(int m=1;m<sales.size();m++)
+                        for(int n=0;n<sales.get(i).size();n++)
+                            if(sales.get(m).get(n).equalsIgnoreCase(key))
+                                avoidAdd.add(i); 
+                }
+            if(compatibility){
+                sales.addAll(returnContents(temp,avoidAdd));
+                JOptionPane.showMessageDialog(null, "File added successfully!","Success",JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_importSalesButtonMouseClicked
+
+    private void importVehicleButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_importVehicleButtonMouseClicked
+        // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setCurrentDirectory(new File("C:\\Users\\Vanness\\Downloads\\assignmentFiles"));// set the directory
+        FileNameExtensionFilter filter = new FileNameExtensionFilter(".csv","csv");
+        fileChooser.setFileFilter(filter);
+        int response = fileChooser.showOpenDialog(null);
+        if(response==fileChooser.APPROVE_OPTION){
+            ArrayList<ArrayList<String>> temp = ImportExport.importCSV(fileChooser.getSelectedFile().getAbsolutePath());
+            String [] tempHeader = returnHeader(temp);
+            String [] prevVehHeader = returnHeader(vehicle);
+            boolean compatibility=true;
+            // determine if the inserted file has the same column values
+            for(int i=0;i<prevVehHeader.length;i++)
+                if(!prevVehHeader[i].equalsIgnoreCase(tempHeader[i])){
+                    JOptionPane.showMessageDialog(null, "The selected file is not compatible","Warning",JOptionPane.WARNING_MESSAGE);
+                    compatibility=false;
+                    break;
+                }
+            // check if the inserted file contains repeated entries
+            ArrayList <Integer> avoidAdd = new ArrayList <Integer>();
+            for(int i=1;i<temp.size();i++)
+                for(int j=0;j<temp.get(i).size();j++){
+                    String key = temp.get(i).get(j);
+                    for(int m=1;m<vehicle.size();m++)
+                        for(int n=0;n<vehicle.get(i).size();n++)
+                            if(vehicle.get(m).get(n).equalsIgnoreCase(key))
+                                avoidAdd.add(i); 
+                }
+            if(compatibility){
+                vehicle.addAll(returnContents(temp,avoidAdd));
+                JOptionPane.showMessageDialog(null, "File added successfully!","Success",JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_importVehicleButtonMouseClicked
+
+    private void importEmployeeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_importEmployeeButtonMouseClicked
+        // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setCurrentDirectory(new File("C:\\Users\\Vanness\\Downloads\\assignmentFiles"));// set the directory
+        FileNameExtensionFilter filter = new FileNameExtensionFilter(".csv","csv");
+        fileChooser.setFileFilter(filter);
+        int response = fileChooser.showOpenDialog(null);
+        if(response==fileChooser.APPROVE_OPTION){
+            ArrayList<ArrayList<String>> temp = ImportExport.importCSV(fileChooser.getSelectedFile().getAbsolutePath());
+            String [] tempHeader = returnHeader(temp);
+            String [] prevEHeader = returnHeader(employee);
+            boolean compatibility=true;
+            // determine if the inserted file has the same column values
+            for(int i=0;i<prevEHeader.length;i++)
+                if(!prevEHeader[i].equalsIgnoreCase(tempHeader[i])){
+                    JOptionPane.showMessageDialog(null, "The selected file is not compatible","Warning",JOptionPane.WARNING_MESSAGE);
+                    compatibility=false;
+                    break;
+                }
+            // check if the inserted file contains repeated entries
+            ArrayList <Integer> avoidAdd = new ArrayList <Integer>();
+            for(int i=1;i<temp.size();i++)
+                for(int j=0;j<temp.get(i).size();j++){
+                    String key = temp.get(i).get(j);
+                    for(int m=1;m<employee.size();m++)
+                        for(int n=0;n<employee.get(i).size();n++)
+                            if(employee.get(m).get(n).equalsIgnoreCase(key))
+                                avoidAdd.add(i); 
+                }
+            if(compatibility){
+                employee.addAll(returnContents(temp,avoidAdd));
+                JOptionPane.showMessageDialog(null, "File added successfully!","Success",JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_importEmployeeButtonMouseClicked
+
+    public static String [] returnHeader (ArrayList<ArrayList<String>> data){
+        String [] temp = data.get(0).toArray(new String[data.get(0).size()]);
+        return temp;
+    }
+    public static String [][] returnContents (ArrayList<ArrayList<String>> data){
+        String [][] temp = new String [data.size()-1][data.get(0).size()];
+        int m=0;
+        for(int i=1;i<data.size();i++){
+            int n=0;
+            for(int j=0;j<data.get(0).size();j++){
+                temp[m][n]=data.get(i).get(j);
+                n++;
+            }
+            m++;
+        }
+        return temp;
+    }
+    public static ArrayList<ArrayList<String>> returnContents (ArrayList<ArrayList<String>> data,ArrayList<Integer> avoidAdd){
+        // this method return contents that are not already present in the previous data
+        ArrayList<ArrayList<String>> temp = new ArrayList<ArrayList<String>>();
+        for(int i=1;i<data.size();i++){
+            boolean skip=false;
+            for(int j=0;j<avoidAdd.size();j++)
+                if(i==avoidAdd.get(j)){
+                    skip=true;
+                    break;
+                }
+            if(!skip)
+                temp.add(new ArrayList<String>(data.get(i)));
+        }
+        return temp;
+    }
     /**
      * @param args the command line arguments
      */
@@ -1082,13 +1271,13 @@ public class MHomePage1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MHomePage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MHomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MHomePage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MHomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MHomePage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MHomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MHomePage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MHomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -1098,14 +1287,16 @@ public class MHomePage1 extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MHomePage1().setVisible(true);
-
-            }
-        });
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1148,7 +1339,6 @@ public class MHomePage1 extends javax.swing.JFrame {
     private javax.swing.JButton importCustButton;
     private javax.swing.JLabel importDataLabel;
     private javax.swing.JButton importEmployeeButton;
-    private javax.swing.JLabel importMessageLabel;
     private javax.swing.JButton importSalesButton;
     private javax.swing.JPanel importTab;
     private javax.swing.JButton importVehicleButton;

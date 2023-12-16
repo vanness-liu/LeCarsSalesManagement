@@ -10,12 +10,12 @@ import javax.swing.ImageIcon;
  *
  * @author Vanness
  */
-public class LoginPage1 extends javax.swing.JFrame {
+public class LoginPage extends javax.swing.JFrame {
 
     /**
      * Creates new form LoginPage
      */
-    public LoginPage1() {
+    public LoginPage() {
         initComponents();
     }
 
@@ -38,7 +38,7 @@ public class LoginPage1 extends javax.swing.JFrame {
         passwordLabel = new javax.swing.JLabel();
         passwordField = new javax.swing.JPasswordField();
         loginButton = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        noAccountLabel = new javax.swing.JLabel();
         toRegisterTabButton = new javax.swing.JLabel();
         regPanel = new javax.swing.JPanel();
         newUserRegLabel = new javax.swing.JLabel();
@@ -107,10 +107,15 @@ public class LoginPage1 extends javax.swing.JFrame {
         loginButton.setForeground(new java.awt.Color(0, 0, 0));
         loginButton.setText("Login");
         loginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        loginButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginButtonMouseClicked(evt);
+            }
+        });
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("No account? Register");
+        noAccountLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        noAccountLabel.setForeground(new java.awt.Color(0, 0, 0));
+        noAccountLabel.setText("No account? Register");
 
         toRegisterTabButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         toRegisterTabButton.setForeground(new java.awt.Color(0, 0, 255));
@@ -143,7 +148,7 @@ public class LoginPage1 extends javax.swing.JFrame {
                         .addGap(55, 55, 55))))
             .addGroup(loginPanelLayout.createSequentialGroup()
                 .addGap(138, 138, 138)
-                .addComponent(jLabel6)
+                .addComponent(noAccountLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(toRegisterTabButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -173,7 +178,7 @@ public class LoginPage1 extends javax.swing.JFrame {
                 .addComponent(loginButton)
                 .addGap(58, 58, 58)
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
+                    .addComponent(noAccountLabel)
                     .addComponent(toRegisterTabButton))
                 .addContainerGap(77, Short.MAX_VALUE))
         );
@@ -351,6 +356,16 @@ public class LoginPage1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_regReEnterPasswordFieldActionPerformed
 
+    private void loginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButtonMouseClicked
+        // TODO add your handling code here:
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MHomePage().setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_loginButtonMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -368,13 +383,13 @@ public class LoginPage1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LoginPage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LoginPage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LoginPage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LoginPage1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -388,15 +403,17 @@ public class LoginPage1 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                ImageIcon icon = new ImageIcon("C:\\Users\\Vanness\\OneDrive\\Documents\\NetBeansProjects\\assignment\\AssignmentTrial\\src\\Code\\chibicar.jpg");
-                LoginPage1 d = new LoginPage1();
-                d.setIconImage(icon.getImage());
+//                ImageIcon icon = new ImageIcon("C:\\Users\\Vanness\\OneDrive\\Documents\\NetBeansProjects\\assignment\\AssignmentTrial\\src\\Code\\chibicar.jpg");
+                LoginPage d = new LoginPage();
+//                d.setIconImage(icon.getImage());
                 d.setTitle("LeCars Sales Management System");
                 d.setSize(470,525);
                 d.setResizable(false);
                 d.setVisible(true);
             }
         });
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -404,11 +421,11 @@ public class LoginPage1 extends javax.swing.JFrame {
     private javax.swing.JLabel SalesLabel;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JButton loginButton;
     private javax.swing.JPanel loginPanel;
     private javax.swing.JLabel newUserRegLabel;
+    private javax.swing.JLabel noAccountLabel;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JPanel regPanel;
