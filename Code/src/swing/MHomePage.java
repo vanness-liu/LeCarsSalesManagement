@@ -6,11 +6,8 @@ package swing;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 
@@ -1073,7 +1070,10 @@ public class MHomePage extends javax.swing.JFrame {
         // TODO add your handling code here:
         int logout = JOptionPane.showConfirmDialog(null,"Logging out?", "Warning",JOptionPane.YES_NO_OPTION);
         if(logout==JOptionPane.YES_OPTION){
-            ImportExport.ExportCSV(customer,"C:\\Users\\Vanness\\Downloads\\assignmentFiles\\cust3.csv");
+            ImportExport.ExportCSV(customer,"C:\\Users\\Vanness\\Downloads\\assignmentFiles\\custTest.csv");
+            ImportExport.ExportCSV(sales,"C:\\Users\\Vanness\\Downloads\\assignmentFiles\\salesTest.csv");
+            ImportExport.ExportCSV(vehicle,"C:\\Users\\Vanness\\Downloads\\assignmentFiles\\vehicleTest.csv");
+            ImportExport.ExportCSV(employee,"C:\\Users\\Vanness\\Downloads\\assignmentFiles\\eTest.csv");
             dispose();
         }
     }//GEN-LAST:event_logoutButtonMouseClicked
