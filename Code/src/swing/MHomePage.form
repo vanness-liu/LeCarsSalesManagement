@@ -636,7 +636,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JPanel" name="insertVehiclePane">
+                <Container class="javax.swing.JPanel" name="accidentPanel">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="ff" red="cc" type="rgb"/>
@@ -654,7 +654,7 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="insertVehiclePane1" min="-2" max="-2" attributes="0"/>
+                              <Component id="insertVehiclePane" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -662,14 +662,14 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="insertVehiclePane1" min="-2" max="-2" attributes="0"/>
+                              <Component id="insertVehiclePane" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Container class="javax.swing.JPanel" name="insertVehiclePane1">
+                    <Container class="javax.swing.JPanel" name="insertVehiclePane">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="cc" green="ff" red="cc" type="rgb"/>
@@ -689,62 +689,77 @@
                                       <Component id="carModelPromptLabel" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="addVehButton" min="-2" pref="108" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="insertVehSuccessLabel" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Component id="addVehButton" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="carModelPromptField" pref="553" max="32767" attributes="0"/>
+                                              <Component id="soldPricePromptField" max="32767" attributes="0"/>
+                                              <Component id="carStatusPromptOption" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                              <Component id="acPricePromptField" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="carPlatePromptFieldV" pref="510" max="32767" attributes="0"/>
-                                          <Component id="carModelPromptField" max="32767" attributes="0"/>
-                                          <Component id="acPricePromptField" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="soldPricePromptField" max="32767" attributes="0"/>
-                                          <Component id="carStatusPromptOption" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="carPlatePromptLettersLabel" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="carPlatePromptLetterFieldV" pref="194" max="32767" attributes="0"/>
+                                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                          <Component id="carPlatePromptDigitsLabel" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="carPlatePromptDigitsFieldV" pref="194" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="182" max="32767" attributes="0"/>
+                                  <EmptySpace pref="139" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="carPlatePromptLabelV" min="-2" max="-2" attributes="0"/>
-                                      <Component id="carPlatePromptFieldV" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="carPlatePromptLabelV" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="carPlatePromptLettersLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="carPlatePromptDigitsLabel" min="-2" max="-2" attributes="0"/>
+                                              <Component id="carPlatePromptDigitsFieldV" alignment="1" min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Component id="carPlatePromptLetterFieldV" alignment="1" min="-2" pref="32" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="carModelPromptLabel" min="-2" max="-2" attributes="0"/>
                                       <Component id="carModelPromptField" min="-2" pref="32" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="acPricePromptLabel" min="-2" max="-2" attributes="0"/>
                                       <Component id="acPricePromptField" min="-2" pref="32" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="carStatusPromptLabel" max="32767" attributes="0"/>
-                                      <Component id="carStatusPromptOption" max="32767" attributes="0"/>
-                                  </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="carStatusPromptOption" min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Component id="carStatusPromptLabel" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                          <Component id="soldPricePromptLabel" max="32767" attributes="0"/>
+                                          <Component id="soldPricePromptLabel" pref="33" max="32767" attributes="0"/>
                                       </Group>
-                                      <Group type="102" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="32767" attributes="0"/>
                                           <Component id="soldPricePromptField" min="-2" pref="32" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="insertVehSuccessLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="addVehButton" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="addVehButton" min="-2" pref="42" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -773,9 +788,10 @@
                             <Property name="text" type="java.lang.String" value="Car Model :"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="carPlatePromptFieldV">
-                        </Component>
                         <Component class="javax.swing.JTextField" name="carModelPromptField">
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carModelPromptFieldActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="acPricePromptLabel">
                           <Properties>
@@ -787,11 +803,6 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Acquired Price :"/>
                           </Properties>
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="acPricePromptField">
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="acPricePromptFieldActionPerformed"/>
-                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="carStatusPromptLabel">
                           <Properties>
@@ -807,14 +818,15 @@
                         <Component class="javax.swing.JComboBox" name="carStatusPromptOption">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="4">
-                                <StringItem index="0" value="Item 1"/>
-                                <StringItem index="1" value="Item 2"/>
-                                <StringItem index="2" value="Item 3"/>
-                                <StringItem index="3" value="Item 4"/>
+                              <StringArray count="2">
+                                <StringItem index="0" value="Sold"/>
+                                <StringItem index="1" value="Available"/>
                               </StringArray>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carStatusPromptOptionActionPerformed"/>
+                          </Events>
                           <AuxValues>
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
@@ -833,15 +845,8 @@
                         <Component class="javax.swing.JTextField" name="soldPricePromptField">
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="soldPricePromptFieldActionPerformed"/>
+                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="soldPricePromptFieldKeyTyped"/>
                           </Events>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="insertVehSuccessLabel">
-                          <Properties>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="ff" type="rgb"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="Display something if successfully added"/>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="addVehButton">
                           <Properties>
@@ -853,6 +858,49 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Add"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="addVehButtonMouseClicked"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="acPricePromptField">
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="acPricePromptFieldActionPerformed"/>
+                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="acPricePromptFieldKeyTyped"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="carPlatePromptLettersLabel">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="18" style="1"/>
+                            </Property>
+                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="0" green="0" red="0" type="rgb"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="Letters :"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="carPlatePromptDigitsLabel">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Segoe UI" size="18" style="1"/>
+                            </Property>
+                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="0" green="0" red="0" type="rgb"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="Digits :"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="carPlatePromptDigitsFieldV">
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carPlatePromptDigitsFieldVActionPerformed"/>
+                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="carPlatePromptDigitsFieldVKeyTyped"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="carPlatePromptLetterFieldV">
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carPlatePromptLetterFieldVActionPerformed"/>
+                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="carPlatePromptLetterFieldVKeyTyped"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
