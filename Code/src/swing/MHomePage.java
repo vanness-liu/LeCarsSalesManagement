@@ -759,6 +759,12 @@ public class MHomePage extends javax.swing.JFrame {
         customerTable.setModel(new DefaultTableModel(returnContents(customer),returnHeader(customer))
         );
         customerTable.setEnabled(false);
+        customerTable.setGridColor(new java.awt.Color(204, 204, 204));
+        customerTable.setSelectionBackground(new java.awt.Color(204, 255, 255));
+        customerTable.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        customerTable.setShowGrid(true);
+        customerTable.getTableHeader().setResizingAllowed(false);
+        customerTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane3.setViewportView(customerTable);
 
         javax.swing.GroupLayout customerTablePaneLayout = new javax.swing.GroupLayout(customerTablePane);
@@ -782,6 +788,10 @@ public class MHomePage extends javax.swing.JFrame {
 
         salesTable.setModel(new DefaultTableModel(returnContents(sales),returnHeader(sales)));
         salesTable.setEnabled(false);
+        salesTable.setGridColor(new java.awt.Color(204, 204, 204));
+        salesTable.setShowGrid(true);
+        salesTable.getTableHeader().setResizingAllowed(false);
+        salesTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane4.setViewportView(salesTable);
 
         javax.swing.GroupLayout salesTablePaneLayout = new javax.swing.GroupLayout(salesTablePane);
@@ -804,6 +814,10 @@ public class MHomePage extends javax.swing.JFrame {
 
         vehicleTable.setModel(new DefaultTableModel(returnContents(vehicle),returnHeader(vehicle)));
         vehicleTable.setEnabled(false);
+        vehicleTable.setGridColor(new java.awt.Color(204, 204, 204));
+        vehicleTable.setShowGrid(true);
+        vehicleTable.getTableHeader().setResizingAllowed(false);
+        vehicleTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane5.setViewportView(vehicleTable);
 
         javax.swing.GroupLayout vehicleTablePaneLayout = new javax.swing.GroupLayout(vehicleTablePane);
@@ -828,6 +842,10 @@ public class MHomePage extends javax.swing.JFrame {
 
         employeeTable.setModel(new DefaultTableModel(returnContents(employee),returnHeader(employee)));
         employeeTable.setEnabled(false);
+        employeeTable.setGridColor(new java.awt.Color(204, 204, 204));
+        employeeTable.setShowGrid(true);
+        employeeTable.getTableHeader().setResizingAllowed(false);
+        employeeTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane6.setViewportView(employeeTable);
 
         javax.swing.GroupLayout employeeTablePaneLayout = new javax.swing.GroupLayout(employeeTablePane);
