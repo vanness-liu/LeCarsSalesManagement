@@ -679,7 +679,7 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
+                              <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="soldPricePromptLabel" min="-2" max="-2" attributes="0"/>
@@ -689,27 +689,30 @@
                                       <Component id="carModelPromptLabel" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                          <Component id="addVehButton" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="carModelPromptField" pref="553" max="32767" attributes="0"/>
-                                              <Component id="soldPricePromptField" max="32767" attributes="0"/>
-                                              <Component id="carStatusPromptOption" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                              <Component id="acPricePromptField" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                              <Component id="addVehButton" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="carStatusPromptOption" min="-2" pref="110" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="443" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="carPlatePromptLettersLabel" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="carPlatePromptLetterFieldV" min="-2" pref="200" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="carPlatePromptDigitsLabel" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="carPlatePromptDigitsFieldV" min="-2" pref="200" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="acPricePromptField" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="soldPricePromptField" max="32767" attributes="0"/>
                                       </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="carPlatePromptLettersLabel" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="carPlatePromptLetterFieldV" pref="194" max="32767" attributes="0"/>
-                                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                          <Component id="carPlatePromptDigitsLabel" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="carPlatePromptDigitsFieldV" pref="194" max="32767" attributes="0"/>
-                                      </Group>
+                                      <Component id="carModelPromptField" min="-2" pref="559" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="139" max="32767" attributes="0"/>
+                                  <EmptySpace pref="133" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -723,39 +726,40 @@
                                               <Component id="carPlatePromptLabelV" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="carPlatePromptLettersLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="carPlatePromptLetterFieldV" min="-2" pref="35" max="-2" attributes="0"/>
                                               <Component id="carPlatePromptDigitsLabel" min="-2" max="-2" attributes="0"/>
-                                              <Component id="carPlatePromptDigitsFieldV" alignment="1" min="-2" pref="32" max="-2" attributes="0"/>
-                                              <Component id="carPlatePromptLetterFieldV" alignment="1" min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Component id="carPlatePromptDigitsFieldV" alignment="1" min="-2" pref="35" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="carModelPromptLabel" min="-2" max="-2" attributes="0"/>
-                                      <Component id="carModelPromptField" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="carModelPromptField" min="-2" pref="35" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="acPricePromptLabel" min="-2" max="-2" attributes="0"/>
-                                      <Component id="acPricePromptField" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="acPricePromptField" min="-2" pref="35" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="carStatusPromptOption" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="carStatusPromptLabel" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="carStatusPromptOption" min="-2" pref="32" max="-2" attributes="0"/>
-                                              <Component id="carStatusPromptLabel" min="-2" max="-2" attributes="0"/>
-                                          </Group>
+                                      <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                                           <Component id="soldPricePromptLabel" pref="33" max="32767" attributes="0"/>
                                       </Group>
-                                      <Group type="102" alignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="soldPricePromptField" min="-2" pref="32" max="-2" attributes="0"/>
+                                          <Component id="soldPricePromptField" min="-2" pref="35" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
@@ -788,11 +792,6 @@
                             <Property name="text" type="java.lang.String" value="Car Model :"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="carModelPromptField">
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carModelPromptFieldActionPerformed"/>
-                          </Events>
-                        </Component>
                         <Component class="javax.swing.JLabel" name="acPricePromptLabel">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -818,9 +817,10 @@
                         <Component class="javax.swing.JComboBox" name="carStatusPromptOption">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="2">
-                                <StringItem index="0" value="Sold"/>
-                                <StringItem index="1" value="Available"/>
+                              <StringArray count="3">
+                                <StringItem index="0" value="--Option--"/>
+                                <StringItem index="1" value="Sold"/>
+                                <StringItem index="2" value="Available"/>
                               </StringArray>
                             </Property>
                           </Properties>
@@ -842,12 +842,6 @@
                             <Property name="text" type="java.lang.String" value="Sold Price :"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="soldPricePromptField">
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="soldPricePromptFieldActionPerformed"/>
-                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="soldPricePromptFieldKeyTyped"/>
-                          </Events>
-                        </Component>
                         <Component class="javax.swing.JButton" name="addVehButton">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -860,12 +854,6 @@
                           </Properties>
                           <Events>
                             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="addVehButtonMouseClicked"/>
-                          </Events>
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="acPricePromptField">
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="acPricePromptFieldActionPerformed"/>
-                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="acPricePromptFieldKeyTyped"/>
                           </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="carPlatePromptLettersLabel">
@@ -890,17 +878,27 @@
                             <Property name="text" type="java.lang.String" value="Digits :"/>
                           </Properties>
                         </Component>
+                        <Component class="javax.swing.JTextField" name="carPlatePromptLetterFieldV">
+                          <Events>
+                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="carPlatePromptLetterFieldVKeyTyped"/>
+                          </Events>
+                        </Component>
                         <Component class="javax.swing.JTextField" name="carPlatePromptDigitsFieldV">
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carPlatePromptDigitsFieldVActionPerformed"/>
                             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="carPlatePromptDigitsFieldVKeyTyped"/>
                           </Events>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="carPlatePromptLetterFieldV">
+                        <Component class="javax.swing.JTextField" name="acPricePromptField">
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carPlatePromptLetterFieldVActionPerformed"/>
-                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="carPlatePromptLetterFieldVKeyTyped"/>
+                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="acPricePromptFieldKeyTyped"/>
                           </Events>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="soldPricePromptField">
+                          <Events>
+                            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="soldPricePromptFieldKeyTyped"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="carModelPromptField">
                         </Component>
                       </SubComponents>
                     </Container>

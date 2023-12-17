@@ -6,6 +6,7 @@ package swing;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -87,18 +88,18 @@ public class MHomePage extends javax.swing.JFrame {
         insertVehiclePane = new javax.swing.JPanel();
         carPlatePromptLabelV = new javax.swing.JLabel();
         carModelPromptLabel = new javax.swing.JLabel();
-        carModelPromptField = new javax.swing.JTextField();
         acPricePromptLabel = new javax.swing.JLabel();
         carStatusPromptLabel = new javax.swing.JLabel();
         carStatusPromptOption = new javax.swing.JComboBox<>();
         soldPricePromptLabel = new javax.swing.JLabel();
-        soldPricePromptField = new javax.swing.JTextField();
         addVehButton = new javax.swing.JButton();
-        acPricePromptField = new javax.swing.JTextField();
         carPlatePromptLettersLabel = new javax.swing.JLabel();
         carPlatePromptDigitsLabel = new javax.swing.JLabel();
-        carPlatePromptDigitsFieldV = new javax.swing.JTextField();
         carPlatePromptLetterFieldV = new javax.swing.JTextField();
+        carPlatePromptDigitsFieldV = new javax.swing.JTextField();
+        acPricePromptField = new javax.swing.JTextField();
+        soldPricePromptField = new javax.swing.JTextField();
+        carModelPromptField = new javax.swing.JTextField();
         insertEmployeePane = new javax.swing.JPanel();
         eIDPromptLabel = new javax.swing.JLabel();
         eIDPromptOption = new javax.swing.JComboBox<>();
@@ -455,12 +456,6 @@ public class MHomePage extends javax.swing.JFrame {
         carModelPromptLabel.setForeground(new java.awt.Color(0, 0, 0));
         carModelPromptLabel.setText("Car Model :");
 
-        carModelPromptField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                carModelPromptFieldActionPerformed(evt);
-            }
-        });
-
         acPricePromptLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         acPricePromptLabel.setForeground(new java.awt.Color(0, 0, 0));
         acPricePromptLabel.setText("Acquired Price :");
@@ -469,7 +464,7 @@ public class MHomePage extends javax.swing.JFrame {
         carStatusPromptLabel.setForeground(new java.awt.Color(0, 0, 0));
         carStatusPromptLabel.setText("Car Status :");
 
-        carStatusPromptOption.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sold", "Available" }));
+        carStatusPromptOption.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Option--", "Sold", "Available" }));
         carStatusPromptOption.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 carStatusPromptOptionActionPerformed(evt);
@@ -480,34 +475,12 @@ public class MHomePage extends javax.swing.JFrame {
         soldPricePromptLabel.setForeground(new java.awt.Color(0, 0, 0));
         soldPricePromptLabel.setText("Sold Price :");
 
-        soldPricePromptField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                soldPricePromptFieldActionPerformed(evt);
-            }
-        });
-        soldPricePromptField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                soldPricePromptFieldKeyTyped(evt);
-            }
-        });
-
         addVehButton.setBackground(new java.awt.Color(255, 51, 51));
         addVehButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         addVehButton.setText("Add");
         addVehButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addVehButtonMouseClicked(evt);
-            }
-        });
-
-        acPricePromptField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                acPricePromptFieldActionPerformed(evt);
-            }
-        });
-        acPricePromptField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                acPricePromptFieldKeyTyped(evt);
             }
         });
 
@@ -519,25 +492,27 @@ public class MHomePage extends javax.swing.JFrame {
         carPlatePromptDigitsLabel.setForeground(new java.awt.Color(0, 0, 0));
         carPlatePromptDigitsLabel.setText("Digits :");
 
-        carPlatePromptDigitsFieldV.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                carPlatePromptDigitsFieldVActionPerformed(evt);
+        carPlatePromptLetterFieldV.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                carPlatePromptLetterFieldVKeyTyped(evt);
             }
         });
+
         carPlatePromptDigitsFieldV.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 carPlatePromptDigitsFieldVKeyTyped(evt);
             }
         });
 
-        carPlatePromptLetterFieldV.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                carPlatePromptLetterFieldVActionPerformed(evt);
+        acPricePromptField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                acPricePromptFieldKeyTyped(evt);
             }
         });
-        carPlatePromptLetterFieldV.addKeyListener(new java.awt.event.KeyAdapter() {
+
+        soldPricePromptField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                carPlatePromptLetterFieldVKeyTyped(evt);
+                soldPricePromptFieldKeyTyped(evt);
             }
         });
 
@@ -554,23 +529,25 @@ public class MHomePage extends javax.swing.JFrame {
                     .addComponent(carPlatePromptLabelV)
                     .addComponent(carModelPromptLabel))
                 .addGap(18, 18, 18)
-                .addGroup(insertVehiclePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(insertVehiclePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(addVehButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(insertVehiclePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(carModelPromptField, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE)
-                            .addComponent(soldPricePromptField)
-                            .addComponent(carStatusPromptOption, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(acPricePromptField)))
-                    .addGroup(insertVehiclePaneLayout.createSequentialGroup()
-                        .addComponent(carPlatePromptLettersLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(carPlatePromptLetterFieldV, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
-                        .addGap(24, 24, 24)
-                        .addComponent(carPlatePromptDigitsLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(carPlatePromptDigitsFieldV, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)))
-                .addContainerGap(139, Short.MAX_VALUE))
+                .addGroup(insertVehiclePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(insertVehiclePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(insertVehiclePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(addVehButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(insertVehiclePaneLayout.createSequentialGroup()
+                                .addComponent(carStatusPromptOption, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(443, 443, 443)))
+                        .addGroup(insertVehiclePaneLayout.createSequentialGroup()
+                            .addComponent(carPlatePromptLettersLabel)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(carPlatePromptLetterFieldV, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(carPlatePromptDigitsLabel)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(carPlatePromptDigitsFieldV, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(acPricePromptField)
+                        .addComponent(soldPricePromptField))
+                    .addComponent(carModelPromptField, javax.swing.GroupLayout.PREFERRED_SIZE, 559, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(133, Short.MAX_VALUE))
         );
         insertVehiclePaneLayout.setVerticalGroup(
             insertVehiclePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -581,31 +558,32 @@ public class MHomePage extends javax.swing.JFrame {
                         .addGroup(insertVehiclePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(carPlatePromptLabelV)
                             .addComponent(carPlatePromptLettersLabel))
-                        .addGap(38, 38, 38))
+                        .addGap(35, 35, 35))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, insertVehiclePaneLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(insertVehiclePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(carPlatePromptLetterFieldV, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(carPlatePromptDigitsLabel)
-                            .addComponent(carPlatePromptDigitsFieldV, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(carPlatePromptLetterFieldV, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(39, 39, 39)))
-                .addGroup(insertVehiclePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(carPlatePromptDigitsFieldV, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(36, 36, 36)))
+                .addGroup(insertVehiclePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(carModelPromptLabel)
-                    .addComponent(carModelPromptField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addGroup(insertVehiclePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(carModelPromptField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(insertVehiclePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(acPricePromptLabel)
-                    .addComponent(acPricePromptField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(acPricePromptField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(insertVehiclePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(carStatusPromptOption, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(carStatusPromptLabel))
                 .addGroup(insertVehiclePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(insertVehiclePaneLayout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(insertVehiclePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(carStatusPromptOption, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(carStatusPromptLabel))
                         .addGap(37, 37, 37)
                         .addComponent(soldPricePromptLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE))
                     .addGroup(insertVehiclePaneLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(soldPricePromptField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(soldPricePromptField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(17, 17, 17)
                 .addComponent(addVehButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(2, 2, 2))
@@ -1107,13 +1085,15 @@ public class MHomePage extends javax.swing.JFrame {
         // TODO add your handling code here:
         int indexInsert = insertDataOptions.getSelectedIndex();
         if(indexInsert==0)
-        insertTabPane.setSelectedIndex(0);
+            insertTabPane.setSelectedIndex(0);
         else if(indexInsert==1)
-        insertTabPane.setSelectedIndex(1);
-        else if(indexInsert==2)
-        insertTabPane.setSelectedIndex(2);
+            insertTabPane.setSelectedIndex(1);
+        else if(indexInsert==2){
+            insertTabPane.setSelectedIndex(2);
+            soldPricePromptField.setEnabled(false);
+        }
         else
-        insertTabPane.setSelectedIndex(3);
+            insertTabPane.setSelectedIndex(3);
     }//GEN-LAST:event_insertDataOptionsActionPerformed
 
     private void tableOptionsPromptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tableOptionsPromptActionPerformed
@@ -1293,48 +1273,20 @@ public class MHomePage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_importEmployeeButtonMouseClicked
 
-    private void acPricePromptFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_acPricePromptFieldKeyTyped
-        // TODO add your handling code here:
-        if(!Character.isDigit(evt.getKeyChar()))
-            evt.consume();
-    }//GEN-LAST:event_acPricePromptFieldKeyTyped
-
-    private void acPricePromptFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acPricePromptFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_acPricePromptFieldActionPerformed
-
     private void addVehButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addVehButtonMouseClicked
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_addVehButtonMouseClicked
-
-    private void soldPricePromptFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_soldPricePromptFieldActionPerformed
-        // TODO add your handling code here:
-        soldPricePromptField.setEnabled(false);
-        if(carStatusPromptOption.getSelectedIndex()==0){
-            soldPricePromptField.setEnabled(true);
-            tempAddVehicle[4]=soldPricePromptField.getText();
+        // Check if any of the inputs are null before proceeding
+        if(carPlatePromptLetterFieldV.getText()==null || carPlatePromptLetterFieldV.getText().length()<3 ||
+           carPlatePromptDigitsFieldV.getText()==null || carModelPromptField.getText()==null || 
+           acPricePromptField.getText()==null || carStatusPromptOption.getSelectedIndex()==0 ||
+           (carStatusPromptOption.getSelectedIndex()==1 && soldPricePromptField.getText().equals(""))){
+                JOptionPane.showMessageDialog(null,"Incomplete information!","Warning",JOptionPane.WARNING_MESSAGE);
+                return;
         }
-        else{
-            tempAddVehicle[4]=null;
-        }
-    }//GEN-LAST:event_soldPricePromptFieldActionPerformed
-
-    private void carStatusPromptOptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carStatusPromptOptionActionPerformed
-        // TODO add your handling code here:
-        tempAddVehicle[3] = Integer.toString(carStatusPromptOption.getSelectedIndex());
-        if(carStatusPromptOption.getSelectedIndex()==0)
-            soldPricePromptField.setEnabled(true);
-        else{
-            soldPricePromptField.setEnabled(false);
-            soldPricePromptField.setText("");
-        }
-    }//GEN-LAST:event_carStatusPromptOptionActionPerformed
-
-    private void carModelPromptFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carModelPromptFieldActionPerformed
-        // TODO add your handling code here:
+        // Combine 2 parts of the car plate together
+        tempAddVehicle[0]=carPlatePromptLetterFieldV.getText().toUpperCase()+carPlatePromptDigitsFieldV.getText();
+        
         String input = carModelPromptField.getText();
-        // Ensure all first letter of each word is uppercase
+        // Ensure all first letter of each word of car model is uppercase
         String [] words = input.split(" ");
         StringBuilder sb = new StringBuilder();
         for(int i=0;i<words.length;i++){
@@ -1348,13 +1300,42 @@ public class MHomePage extends javax.swing.JFrame {
             sb.append(" ");
         }
         tempAddVehicle[1]=sb.toString();
-    }//GEN-LAST:event_carModelPromptFieldActionPerformed
+        
+        tempAddVehicle[2]=acPricePromptField.getText();
+        tempAddVehicle[3]=Integer.toString(carStatusPromptOption.getSelectedIndex()-1);
+        if(carStatusPromptOption.getSelectedIndex()==1)
+            tempAddVehicle[4]=soldPricePromptField.getText();
+        else
+            tempAddVehicle[4]=null;
+        
+        String [] tempAddVehicle2 = {tempAddVehicle[0],tempAddVehicle[1],tempAddVehicle[2],tempAddVehicle[3],tempAddVehicle[4]};
+        vehicle.add(new ArrayList<>(Arrays.asList(tempAddVehicle2)));
+        JOptionPane.showMessageDialog(null, "Entry added successfully!","Success",JOptionPane.INFORMATION_MESSAGE);
+        // Reset to empty array for next input
+        tempAddVehicle[0]=null;
+        tempAddVehicle[1]=null;
+        tempAddVehicle[2]=null;
+        tempAddVehicle[3]=null;
+        tempAddVehicle[4]=null;
+        // Reset the text fields to empty text fields
+        carPlatePromptLetterFieldV.setText("");
+        carPlatePromptDigitsFieldV.setText("");
+        carModelPromptField.setText("");
+        acPricePromptField.setText("");
+        carStatusPromptOption.setSelectedIndex(0);
+        soldPricePromptField.setText("");
+    }//GEN-LAST:event_addVehButtonMouseClicked
 
-    private void carPlatePromptDigitsFieldVKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_carPlatePromptDigitsFieldVKeyTyped
+    private void carStatusPromptOptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carStatusPromptOptionActionPerformed
         // TODO add your handling code here:
-        if(!Character.isDigit(evt.getKeyChar()) || carPlatePromptDigitsFieldV.getText().length()>=4)
-            evt.consume();
-    }//GEN-LAST:event_carPlatePromptDigitsFieldVKeyTyped
+        soldPricePromptField.setText("");
+        if(carStatusPromptOption.getSelectedIndex()==1){
+            soldPricePromptField.setEnabled(true);
+        }
+        else{
+            soldPricePromptField.setEnabled(false);
+        }
+    }//GEN-LAST:event_carStatusPromptOptionActionPerformed
 
     private void carPlatePromptLetterFieldVKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_carPlatePromptLetterFieldVKeyTyped
         // TODO add your handling code here:
@@ -1362,15 +1343,17 @@ public class MHomePage extends javax.swing.JFrame {
             evt.consume();
     }//GEN-LAST:event_carPlatePromptLetterFieldVKeyTyped
 
-    private void carPlatePromptLetterFieldVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carPlatePromptLetterFieldVActionPerformed
+    private void carPlatePromptDigitsFieldVKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_carPlatePromptDigitsFieldVKeyTyped
         // TODO add your handling code here:
-        tempAddVehicle[0] += carPlatePromptLetterFieldV.getText();
-    }//GEN-LAST:event_carPlatePromptLetterFieldVActionPerformed
+        if(!Character.isDigit(evt.getKeyChar()) || carPlatePromptDigitsFieldV.getText().length()>=4)
+            evt.consume();
+    }//GEN-LAST:event_carPlatePromptDigitsFieldVKeyTyped
 
-    private void carPlatePromptDigitsFieldVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carPlatePromptDigitsFieldVActionPerformed
+    private void acPricePromptFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_acPricePromptFieldKeyTyped
         // TODO add your handling code here:
-        tempAddVehicle[0] += carPlatePromptDigitsFieldV.getText();
-    }//GEN-LAST:event_carPlatePromptDigitsFieldVActionPerformed
+        if(!Character.isDigit(evt.getKeyChar()))
+            evt.consume();
+    }//GEN-LAST:event_acPricePromptFieldKeyTyped
 
     private void soldPricePromptFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_soldPricePromptFieldKeyTyped
         // TODO add your handling code here:
